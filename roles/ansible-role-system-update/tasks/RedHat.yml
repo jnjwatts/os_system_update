@@ -1,0 +1,8 @@
+---
+- name: Reregister with RHN
+  shell: /root/resubscribe-new-vm.sh
+
+- name: Upgrade all packages
+  yum: name=* state=latest
+  tags: system-update
+
